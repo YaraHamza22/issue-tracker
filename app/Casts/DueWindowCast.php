@@ -7,23 +7,22 @@ use Illuminate\Database\Eloquent\Model;
 
 class DueWindowCast implements CastsAttributes
 {
-    /**
-     * Cast the given value.
-     *
-     * @param  array<string, mixed>  $attributes
-     */
-    public function get(Model $model, string $key, mixed $value, array $attributes): mixed
+    public function get(Model $model, string $key, $value, array $attributes)
     {
-        return $value;
+        $arr = $value ? json_decode($value, true) : null;
+        if (!$arr) return null;
+        return [
+            'start' => $arr['start'] ? \Carbon\Carbon::parse($arr['start']) : null,
+            'end'   => $arr['end']   ? \Carbon\Carbon::parse($arr['end'])   : null,
+        ];
     }
 
-    /**
-     * Prepare the given value for storage.
-     *
-     * @param  array<string, mixed>  $attributes
-     */
-    public function set(Model $model, string $key, mixed $value, array $attributes): mixed
+    public function set(Model $model, string $key, $value, array $attributes)
     {
-        return $value;
+        if (!$value) return null;
+        return json_encode([
+            'start' => isset($value['start']) ? (string)\Carbon\Carbon::parse($value['start']) : null,
+            'end'   => isset($value['end'])   ? (string)\Carbon\Carbon::parse($value['end'])   : null,
+        ]);
     }
 }
