@@ -1,0 +1,229 @@
+{
+  "info": {
+    "name": "Issue Tracker API Collection",
+    "_postman_id": "1b45b6c0-4d7d-11ee-9c99-0242ac120002",
+    "description": "Complete API collection for Projects, Issues, Labels, Comments, Users, and Reports",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Projects CRUD",
+      "item": [
+        {
+          "name": "Get All Projects",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/projects"
+          }
+        },
+        {
+          "name": "Create Project",
+          "request": {
+            "method": "POST",
+            "url": "{{base_url}}/projects"
+          }
+        },
+        {
+          "name": "Get Project By ID",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/projects/1"
+          }
+        },
+        {
+          "name": "Update Project",
+          "request": {
+            "method": "PUT",
+            "url": "{{base_url}}/projects/1"
+          }
+        },
+        {
+          "name": "Delete Project",
+          "request": {
+            "method": "DELETE",
+            "url": "{{base_url}}/projects/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Issues CRUD",
+      "item": [
+        {
+          "name": "Get All Issues",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/issues"
+          }
+        },
+        {
+          "name": "Create Issue",
+          "request": {
+            "method": "POST",
+            "url": "{{base_url}}/issues"
+          }
+        },
+        {
+          "name": "Get Issue By ID",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/issues/1"
+          }
+        },
+        {
+          "name": "Update Issue",
+          "request": {
+            "method": "PUT",
+            "url": "{{base_url}}/issues/1"
+          }
+        },
+        {
+          "name": "Delete Issue",
+          "request": {
+            "method": "DELETE",
+            "url": "{{base_url}}/issues/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Labels CRUD",
+      "item": [
+        {
+          "name": "Get All Labels",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/labels"
+          }
+        },
+        {
+          "name": "Create Label",
+          "request": {
+            "method": "POST",
+            "url": "{{base_url}}/labels"
+          }
+        },
+        {
+          "name": "Update Label",
+          "request": {
+            "method": "PUT",
+            "url": "{{base_url}}/labels/1"
+          }
+        },
+        {
+          "name": "Delete Label",
+          "request": {
+            "method": "DELETE",
+            "url": "{{base_url}}/labels/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Comments CRUD",
+      "item": [
+        {
+          "name": "Get All Comments",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/comments"
+          }
+        },
+        {
+          "name": "Create Comment",
+          "request": {
+            "method": "POST",
+            "url": "{{base_url}}/comments"
+          }
+        },
+        {
+          "name": "Update Comment",
+          "request": {
+            "method": "PUT",
+            "url": "{{base_url}}/comments/1"
+          }
+        },
+        {
+          "name": "Delete Comment",
+          "request": {
+            "method": "DELETE",
+            "url": "{{base_url}}/comments/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Users CRUD",
+      "item": [
+        {
+          "name": "Get All Users",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/users"
+          }
+        },
+        {
+          "name": "Create User",
+          "request": {
+            "method": "POST",
+            "url": "{{base_url}}/users"
+          }
+        },
+        {
+          "name": "Update User",
+          "request": {
+            "method": "PUT",
+            "url": "{{base_url}}/users/1"
+          }
+        },
+        {
+          "name": "Delete User",
+          "request": {
+            "method": "DELETE",
+            "url": "{{base_url}}/users/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Reports",
+      "item": [
+        {
+          "name": "Project Issues Report",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/reports/projects-issues"
+          }
+        },
+        {
+          "name": "User Issues Report",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/reports/users-issues"
+          }
+        },
+        {
+          "name": "Issues Comments Count",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/reports/issues-comments"
+          }
+        },
+        {
+          "name": "Urgent Issues",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/reports/urgent"
+          }
+        },
+        {
+          "name": "Recently Closed Issues",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/reports/recently-closed"
+          }
+        }
+      ]
+    }
+  ]
+}
